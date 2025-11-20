@@ -1,6 +1,8 @@
 # DevOps Intern Final Assessment
 
-[![CI](https://github.com/YOUR_USERNAME/devops-intern-final/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/devops-intern-final/actions/workflows/ci.yml)
+[![CI](https://github.com/Avy1013
+Devops-Springer-Capital-assessment-/actions/workflows/ci.yml/badge.svg)](https://github.com/Avy1013
+Devops-Springer-Capital-assessment-/actions/workflows/ci.yml)
 
 **Name:** Vaibhav Gupta  
 **Date:** November 19, 2025  
@@ -15,6 +17,8 @@ This repository contains the completed tasks for the DevOps intern final assessm
 - `hello.py` - A simple Python script that prints "Hello, DevOps!"
 - `Dockerfile` - Docker configuration to containerize the application
 - `.github/workflows/ci.yml` - GitHub Actions CI/CD pipeline
+- `nomad/hello.nomad` - Nomad job specification for deployment
+- `monitoring/loki_setup.txt` - Grafana Loki monitoring setup guide
 
 ## How to Run
 
@@ -59,33 +63,21 @@ devops-intern-final/
 ├── .github/
 │   └── workflows/
 │       └── ci.yml
+├── monitoring/
+│   └── loki_setup.txt
+├── nomad/
+│   └── hello.nomad
 ├── Dockerfile
 ├── README.md
 └── hello.py
 ```
 
-## Setup Instructions
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/devops-intern-final.git
+   git clone https://github.com/Avy1013
+Devops-Springer-Capital-assessment-.git
    cd devops-intern-final
-   ```
-
-2. Run the sample script:
-   ```bash
-   python3 hello.py
-   ```
-
-3. Or run with Docker:
-   ```bash
-   docker build -t hello-devops .
-   docker run hello-devops
-   ```
-
-## Author
-
-Vaibhav Gupta - DevOps Intern Assessment
 
 
 

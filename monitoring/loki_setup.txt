@@ -1,0 +1,42 @@
+# Loki Monitoring Setup
+
+This document describes the setup for monitoring logs using Grafana Loki and Alloy.
+
+## Setup
+The stack is defined in `docker-compose.yml` and includes:
+- **Loki**: The log aggregation system (Port 3100).
+- **Alloy**: The telemetry collector that scrapes Docker container logs and forwards them to Loki.
+
+## Starting the Stack
+To start Loki and Alloy, run the following command in the `monitoring` directory:
+
+```bash
+docker-compose up -d
+```
+
+This ensures a reproducible environment where Alloy is automatically configured to discover containers via the Docker socket.
+
+## Configuration
+- `config.alloy`: Configures Alloy to discover Docker containers, relabel metadata (e.g., extracting `container_name`), and forward logs to Loki.
+- `docker-compose.yml`: Orchestrates the services.
+
+## Viewing Logs
+You can query Loki directly using its HTTP API.
+
+### 1. Check available labels
+See which labels are being indexed by Loki:
+
+```bash
+curl -s "http://localhost:3100/loki/api/v1/labels" | jq
+```
+
+### 2. Query Logs
+Fetch logs for a specific container (e.g., querying all logs with a container name):
+
+```bash
+curl -G -s "http://localhost:3100/loki/api/v1/query_range" \
+  --data-urlencode 'query={container_name=~".+"}' \
+  --data-urlencode 'limit=10' | jq
+```
+
+You can replace `container_name=~".+"` with specific selectors like `container_name="monitoring-loki-1"`.
