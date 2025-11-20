@@ -1,8 +1,6 @@
 # DevOps Intern Final Assessment
 
-[![CI](https://github.com/Avy1013
-Devops-Springer-Capital-assessment-/actions/workflows/ci.yml/badge.svg)](https://github.com/Avy1013
-Devops-Springer-Capital-assessment-/actions/workflows/ci.yml)
+[![CI](https://github.com/Avy1013/Devops-Springer-Capital-assessment-/actions/workflows/ci.yml/badge.svg)](https://github.com/Avy1013/Devops-Springer-Capital-assessment-/actions/workflows/ci.yml)
 
 **Name:** Vaibhav Gupta  
 **Date:** November 19, 2025  
@@ -78,6 +76,7 @@ devops-intern-final/
    git clone https://github.com/Avy1013
 Devops-Springer-Capital-assessment-.git
    cd devops-intern-final
+```
 
 
 
